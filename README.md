@@ -85,10 +85,12 @@ By default the websocket connection will get closed after 60 seconds of nothing 
 | Code | Meaning                | Description                                                                            |
 | ---- | ---------------------- | -------------------------------------------------------------------------------------- |
 | `0`  | **Idle**               | No print in progress. Default state after power-on or when print is canceled/finished. |
+| `5`  | **Pausing**            | Print job is in the process of pausing.                                                |
 | `8`  | **Preparing to Print** | Print job accepted, beginning warm-up or calibration routines.                         |
 | `9`  | **Starting Print**     | Print has begun — may be homing, priming, or performing initial G-code steps.          |
 | `10` | **Paused**             | Print is paused by user or error.                                                      |
 | `13` | **Printing (Active)**  | Actively printing layer-by-layer; heaters, motion, and timers engaged.                 |
+| `20` | **Resuming**           | Print job is preparing to print after being paused.                                    |
 
 
 ## ACK Message Example
